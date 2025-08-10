@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUX</title>
+    <meta name="description" content="Dans le cadre de l’UE Rethinking UX (RUX) 24–25, le projet visant à repenser l’aménagement de la salle A084 afin d’améliorer l’expérience des étudiants.">
+    <meta property="og:site_name" content="PRUX Case Study">
+    <meta property="og:title" content="PRUX Case Study">
+    <meta property="og:description" content="Dans le cadre de l’UE Rethinking UX (RUX) 24–25, le projet visant à repenser l’aménagement de la salle A084 afin d’améliorer l’expérience des étudiants.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theocolpaert.be/projets/tfa/csRux.html">
+    <meta property="og:image" content="https://theocolpaert.be/projets/tfa/assets/images/img_port/RuxImg.webp">
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="945">
+
+  <link rel="icon" type="image/x-icon" href="https://theocolpaert.be/projets/tfa_2/assets/images/img_port/favicon.ico">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link  rel="stylesheet" href="styles/app.css">
+  <script src="scripts/app.js" defer></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="custom-cursor"></div>
+  <canvas id="particules_bg"></canvas>
+  <nav class="menu">
+    <a class="p--nav" href="index.html">Théo Colpaert</a>
+    <button class="menu__btn"></button>
+    <div class="blur-overlay"></div>
+      <ul class="menu__liste">
+        <li class="menu--li"><a href="index.html#about">About</a></li>
+        <li class="menu--li"><a href="index.html#projects">Projects</a></li>
+        <li class="menu--li"><a href="#contact">Contact</a></li>
+      </ul>
+  </nav>
+        
+  <header class="banniere gridcol">
+    <div class="banniere__text">
+      <h1 class="title title--big">PRUX Case Study</h1>
+      <p class="p--center__big">Une salle à réaménager...</p>
+    </div>
+  </header>
+
+  <div class="scroll-down js-scroll-down">
+      <svg width="80" height="80" viewBox="0 0 50 50">
+          <circle cx="25" cy="25" r="20" stroke="#fafafa" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="125" stroke-dashoffset="100" class="scroll-circle"></circle>
+          <path d="M25 32 l-6 -6 h12 l-6 6" fill="#fafafa"/>
+      </svg>
+  </div>
+
+  <main>
+    <nav class="nav-vertical">
+      <a href="#section-1">1.&nbsp;Contexte</a>
+      <a href="#section-2">2.&nbsp;Recherches & Analyse</a>
+      <a href="#section-3">3.&nbsp;Mise en commun</a>
+      <a href="#section-4">4.&nbsp;Répartition des tâches</a>
+      <a href="#section-5">5.&nbsp;Plans & photos</a>
+      <a href="#section-6">6.&nbsp;Etude de marché</a>
+      <a href="#section-7">7.&nbsp;Le code</a>
+      <a href="#section-8">8.&nbsp;Problèmes rencontrés</a>
+      <a href="#section-9">9.&nbsp;Conclusion</a>
+    </nav>
+
+    <section id="section-1" class="section gridcol gridpc">
+      <h2 class="title__cs title--col2">1. Contexte</h2>
+      <p class="p--col2col6"><span>Dans le cadre du projet «Rethinking-UX», nous avons dû repenser l’aménagement d'une salle de l'école, en fonction des envies des étudiants.</span> Avant toute modification, dans cette salle, il n'y avait que quelques bancs et un grand espace vide, ce qui limitait son&nbsp;potentiel.</p>
+      <p class="p--col2col6"><span>Le groupe a mené une enquête afin de comprendre les besoins réels des futurs utilisateurs, afin de concevoir des solutions adaptées qui favorisent un environnement plus ergonomique, collaboratif et stimulant.</span> Grâce à une approche centrée sur l’utilisateur et une méthodologie itérative, nous avons exploré différentes pistes d’aménagement et mis en place des améliorations concrètes pour optimiser l’usage de&nbsp;cette&nbsp;salle.</p>
+      <img class="img--contexte img--pos" src="assets/images/img_prux/local_nb.webp" srcset="assets/images/img_prux/@2x/local_nb@2x.webp 2x" alt="Une photo du local mise à disposition par les professeurs, car la visite du local était impossible à ce moment là.">
+    </section>
+
+    <section id="section-2" class="section section--color2 gridcol gridpc">
+      <h2 class="title__cs title--col2">2. Recherches et&nbsp;analyse</h2>
+      <p class="p--col3col6">Le groupe a d'abord pensé aux questions à poser aux étudiants concernant l’utilisation future du local. Pour avancer plus efficacement dans le travail, nous avons décidé de nous répartir les&nbsp;tâches.</p>
+      <img class="img--analyse" src="assets/images/img_prux/loupe.webp" srcset="assets/images/img_prux/@2x/loupe@2x.webp  2x" alt="Image représentant une loupe.">
+      <p class="p--col3col6"><span>Une fois le questionnaire terminé, la décision a été prise de faire un premier tour dans l’école, de façon à recueillir les premiers témoignages d’étudiants. Le questionnaire a aussi été partagé en ligne via nos réseaux sociaux, afin de toucher le plus grand nombre de&nbsp;personnes&nbsp;possible.</span></p>
+      <p class="p--col3col6">Une fois la visite du lolcal effectuée , la réflexion a porté sur les améliorations à envisager pour le local. <span>J'ai réalisé un premier plan sur papier de la situation du local, pour voir les aménagements possibles ou&nbsp;non.</span></p>
+      <p class="p--col3col6"><span>Ensuite, le groupe a commencé à collecter et analyser les résultats du sondage.</span> En parallèle, des membre du groupe ont commencé à faire un prototype de mise en place du mobilier dans le local (en retouchant les photos mises à disposition par les&nbsp;professeurs).</p>
+        
+    </section>
+    <section id="section-3" class="section gridcol gridpc">
+      <h2 class="title__cs title--col2">3. Mise en commun</h2>
+      <p class="p--col2col6"><span>Une mise en commun des résultats entre les groupes a permis de tirer des conclusions plus globales, pour aménager au mieux le local en fonction des besoins, non plus de 20 étudiants mais de 120.</span> En effet, plus le groupe cible est vaste, plus les résultats sont représentatifs de&nbsp;leurs&nbsp;attentes.</p>
+    </section>
+
+    <section id="section-4" class="section gridcol gridpc">
+      <h2 class="title__cs title--col3">4. Répartition des&nbsp;tâches</h2>
+      <p class="p--col4col8">Afin de rendre notre travail plus efficace, il a été décidé avec les autres groupes de nous répartir l’espace du local. <span>Notre groupe, a dû s'occuper de l’aménagement de la longueur de la salle.</span> Il a aussi été décidé que tous les groupes resteront "en contact" tout au long du projet, pour conserver un style cohérent (notamment au niveau des couleurs du mobilier et&nbsp;des&nbsp;murs).</p>
+      <img class="img--repartition img--pos" src="assets/images/img_prux/ta_pc.webp" srcset="assets/images/img_prux/@2x/ta_pc@2x.webp 2x" alt="Image mettant en scène 2 étudiants (Théo Copaert et Adrien Fraiture) lors de la retouche d'une photo qui va être utilisée plus tard dans le projet.">
+      <p class="p--col4col8">Dès que quelqu'un faisait ne photo du local, il la mettaiot à disposition pour les autres groupes. <span>De notre côté, pour nous faire une idée du matériel à placer et de la manière dont nous allons le disposer, un membre du groupe a réalisé un modèle 3D de la salle (en utilisant Spline 3D).</span> Cela nous a permis de tester rapidement différents designs et de mieux visualiser notre&nbsp;projet.</p>
+      <img class="viewer" src="assets/images/img_prux/plan3d.webp" srcset="assets/images/img_prux/@2x/plan3d@2x.webp 2x" alt="Renu 3D du local réalisé sur le logiciel «Spline 3D».">
+        
+    </section>
+    <section id="section-5" class="section gridcol gridpc">
+      <h2 class="title__cs title--col2">5. Quelques&nbsp;plans&nbsp;et photos&nbsp;modifiées</h2>
+      <p class="p--col2col6">Différents plans en vue de dessus ont été réalisés sur Figma, en variant la disposition du mobilier. Ces plans ont ensuite été proposés au reste de la classe, ce qui a permis de recueillir des retours sur l’agencement jugé le plus cohérent en fonction de l’espace disponible. <span>Le plan qui a finalement été retenu est visible plus&nbsp;bas.</span></p>
+      <p class="p--col2col6"><span>Afin de nous projeter dans le futur, nous avons retouché les photos mises à disposition par les professeurs.</span> Voici deux images retouchées.</p>
+
+      <div class="carousel_tot">
+        <div class="carousel">
+          <button id="prev">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+            </svg>
+          </button>
+
+          <div id="square" class="carre">
+            <img src="assets/images/img_prux/photor1.webp" srcset="assets/images/img_prux/@2x/photor1@2x.webp 2x" class="carousel-img active" alt="Image retouchée montrant les aménagements du mobilier dans la longueur principale du locale (à l'arrière plan,on peut voir les portes d'entrée du local). Sur la gauche on peut y voir les poufs, une table ronde. Sur la droite le long du mur, on peut voir des tables avec des oridinateurs et des armoires métalliques.">
+            <img src="assets/images/img_prux/photor2.webp" srcset="assets/images/img_prux/@2x/photor2@2x.webp 2x" class="carousel-img" alt="Image retouchée montrant les aménagements du mobilier dans le coin gauche opposé à la porte d'entrée. Le long du mur à gauche, on retrouve une table avec des ordinateurs et une armoire metallique. LE long du mur perpendiculaire on voit une autre table sur laquelle il y  aussi des ordinateurs. Dans l'angle des 2 murs, on voit une plante. Au premier plan, on voit une table ronde et des chaises (partiellement visible).">
+            <img src="assets/images/img_prux/plan2d.webp" srcset="assets/images/img_prux/@2x/plan2d@2x.webp 2x" class="carousel-img" alt="Plan vue de haut du local.">
+          </div>
+
+          <button id="next">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="indicators">
+          <div class="dot" id="dot0"></div>
+          <div class="dot" id="dot1"></div>
+          <div class="dot" id="dot2"></div>
+        </div>
+      </div>
+    </section> 
+
+    <section id="section-6" class="section gridcol">
+      <h2 class="title__cs title--col3">6. Une&nbsp;étude de&nbsp;marché</h2>
+      <p class="p--col3col7"><span>Comme le groupe pensait utiliser du matériel que l'école n'avait pas (des poufs et des plantes), nous avions dû réliser une étude de marché.</span> Il a été convenu de consulter les marchés du neuf et de l'occasion pour trouver le meilleur prix&nbsp;possible.</p>
+    </section>
+
+    <section id="section-7" class="section gridcol">
+      <h2 class="title__cs title--col2">7. Le&nbsp;code</h2>
+      <p class="p--col2col6">Une fois toutes ces étapes réalisées, chaque membre du groupe a dû réaliser son propre site, avec son propre style graphique (seul le contenu textuel a été réalisé en groupe). C'est cette partie qui a pris le plus de temps. En effet, il a fallu penser à la manière de présenter le contenu, afin de le rendre intéresssant pour le lecteur. Heureusement pour moi, je n'ai pas eu trop de difficultés lors&nbsp;du&nbsp;codage.</p>
+    </section>
+
+    <section id="section-8" class="section gridcol">
+      <h2 class="title__cs title--col3">8. Problèmes rencontrés</h2>
+      <p class="p--col3col6"><span>Durant le projet, le groupe a dû faire face à plusieurs&nbsp;problématiques.</span> En effet, le local était rempli de carton. Ceci a rendu difficile les observations du local (nombres de prises électriques, éclairage suffisant...), et a aussi demandé du travail supplémentaire pour retoucher les photos. Par ailleurs, le local était souvent&nbsp;fermé.</p>
+    </section>
+
+    <section id="section-9" class="section gridcol">
+      <h2 class="title__cs title--col3">9. Conclusion</h2>
+      <p class="p--conclusion">Ce projet a montré que la répartition des tâches (interne dans le groupe de 5 mais aussi avec les autres groupes) est un point primordial pour garantir une progression rapide et structurée. Les mises en commun avec les autres groupes sont aussi importantes car elles permettent de voir si tout le monde a bien la même compréhension des besoins des étudiants. Enfin, il est important de toujours garder en tête les besoins du "client" et d'anticiper le budget nécessaire à la réalisation du&nbsp;projet.</p>
+    </section>
+
+    <section class="section gridcol gridpc">
+      <a class="btn--projet" href="https://theocolpaert.be/projets/rethinking-ux/" target="_blank">Explorez le projet</a>
+    </section>
+
+    <section class="section gridcol gridpc">
+      <a class="btn--ret" href="index.html#projects">Retour aux projets</a>
+      <a class="btn--suiv" href="csDataplay.html">Case Study suivant</a>
+    </section>
+
+  </main>
+  
+  <footer id="contact" class="gridfoot gridcol foot_cs">
+    <div class="div--footer">
+      <h4 class="title--h4">Contact&nbsp;me</h4>
+      <p class="p--contact"><a class="mailto" href="mailto:theocolpaert8@gmail.com">theocolpaert8@gmail.com</a></p>
+<div class="socials">
+        <a href="https://www.instagram.com/theo.colpaert/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="img-res" viewBox="0 0 16 16" fill="currentColor"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+
+        <a href="https://www.facebook.com/theo.colpaert" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="img-res" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
+
+        <a href="https://github.com/Foxx05" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="img-res" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
+      </div>
+    </div>
+
+    <p class="p--copy">&#169;Théo Colpaert — 2025</p>
+  </footer>
+
+    
+</body>
+</html>

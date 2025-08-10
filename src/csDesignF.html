@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Fiction case study</title>
+    <meta name="description" content="Dans le cadre de mon projet de fin d'année, j'ai dû réfléchir à l'application d'une technlogie actuelle dans un futur proche.">
+    <meta property="og:site_name" content="Design Fiction case study">
+    <meta property="og:title" content="Design Fiction case study">
+    <meta property="og:description" content="Dans le cadre de mon projet de fin d'année, j'ai dû réfléchir à l'application d'une technlogie actuelle dans un futur proche.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theocolpaert.be/projets/tfa/csDesignF.html">
+    <meta property="og:image" content="https://theocolpaert.be/projets/tfa/assets/images/img_port/PFcsimg.webp">
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="945">
+
+  <link rel="icon" type="image/x-icon" href="https://theocolpaert.be/projets/tfa_2/assets/images/img_port/favicon.ico">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link  rel="stylesheet" href="styles/app.css">
+  <script src="scripts/app.js" defer></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+    <canvas id="particules_bg"></canvas>
+    <nav class="menu">
+        <a class="p--nav" href="index.html">Théo Colpaert</a>
+        <button class="menu__btn"></button>
+        <div class="blur-overlay"></div>
+        <ul class="menu__liste">
+            <li class="menu--li"><a href="index.html#about">About</a></li>
+            <li class="menu--li"><a href="index.html#projects">Projects</a></li>
+            <li class="menu--li"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+            
+    <header class="banniere gridcol">
+        <div class="banniere__text">
+            <h1 class="title title--big">Design Fiction Case&nbsp;Study</h1>
+            <p class="p--center__big">Une technologie actuelle dans le futur</p>
+        </div>
+    </header>
+
+        <div class="scroll-down js-scroll-down">
+            <svg width="80" height="80" viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20" stroke="#fafafa" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="125" stroke-dashoffset="100" class="scroll-circle"></circle>
+                <path d="M25 32 l-6 -6 h12 l-6 6" fill="#fafafa"/>
+            </svg>
+        </div>
+
+    <main>
+        <nav class="nav-vertical">
+            <a href="#section-1">1.&nbsp;Contexte</a>
+            <a href="#section-2">2.&nbsp;Concept</a>
+            <a href="#section-3">3.&nbsp;Les étapes</a>
+            <a href="#section-4">4.&nbsp;La direction artistique</a>
+            <a href="#section-5">5.&nbsp;Les outils</a>
+            <a href="#section-6">6.&nbsp;Conclusion</a>
+        </nav>
+
+        <section id="section-1" class="section gridcol">
+            <h2 class="title__cs title--col3">1. Le Contexte</h2>
+            <p class="p p--col3col7"><span>Dans le cadre de mon TFA, j’ai dû réfléchir à la conception d’un site autour d’une technologie actuelle appliquée dans un futur proche.</span> L’objectif : réfléchir à une innovation plausible, mais aussi anticiper ses impacts qu’ils soient positifs ou négatifs. Je me suis intéressé aux drones, en particulier à leurs possibilités d’évolution dans des milieux naturels protégés. J’ai imaginé une histoire autour de drones biomimétiques en forme d’oiseaux. Dans le contexte que vous allez découvrir, les drones auront un rôle positif, en effet, ils vont servir à aider à rechercher une personne portée disparue.</p>
+        </section>
+
+        <section id="section-2" class="section gridcol">
+            <h2 class="title__cs title--col2">2. Le concept</h2>
+            <p class="p--col2col6__csdata"><span>SkyGuard met en scène une mission de secours fictive, menée en 2035, dans une région vallonnée (voire montagneuse par endroits) protégée.</span> Une personne a disparu, et les secours déploient des drones silencieux, autonomes, volants en essaim, conçus&nbsp;pour&nbsp;:</p>
+            <div class="problemes-container">
+                <ul>
+                    <li>reproduire le vol naturel des oiseaux via des ailes&nbsp;battantes;</li>
+                    <li>se recharger en vol grâce aux courants ascendants;</li>
+                    <li>transmettre des données en temps réel aux équipes au sol.</li>
+                </ul>
+            </div>
+            <p class="p--col2col6">Le récit permet de critiquer la technologie autant que de la valoriser : les capteurs thermiques sont imparfaits, les habitants du village sont méfiants, et même la personne recherchée prend peur en voyant ces «oiseaux» tourner&nbsp;autour&nbsp;d’elle.</p>
+            <img class="img--falcon__cs" src="assets/images/img_df/faucon.webp" srcset="assets/images/img_df/@2x/faucon@2x.webp 2x" alt="Rendu 3D d'un drone oiseau.">
+        </section>
+
+        <section id="section-3" class="section gridcol">
+            <h2 class="title__cs title--col3">3. Les étapes</h2>
+            <p class="p p--col3col7"><span>Avant de me lancer dans la phase de développement, j’ai d’abord conçu un premier «plan» Figma.</span> Cet outil m’a permis de structurer mes idées et de mieux visualiser le positionnement des différents éléments sur la page. Une fois cette première version terminée, je l’ai retravaillée en remplaçant les images issues d’internet par mes propres illustrations et rendus 3D.</p>
+        </section>
+
+        <section id="section-4" class="section gridcol">
+            <h2 class="title__cs title--col3">4. Direction artistique & visuelle</h2>
+            <p class="p p--col4col8">Pour aider tout un chacun à visualiser le drone et ses technologies embarquées, j’ai réalisé plusieurs illustrations fixes sur Blender et Photoshop. Ces visuels, accessibles sur le site, permettent de vous rendre compte de la forme du drone.</p>
+            <p class="p p--col4col8"><span>Ces réalisations offrent une immersion rapide et intuitive dans l’univers de SkyGuard, en rendant tangible une technologie encore fictive mais&nbsp;réaliste.</span></p>
+
+            <img class="img--col2col4" src="assets/images/img_df_cs/birdcode.webp" srcset="assets/images/img_df_cs/@2x/birdcode@2x.webp 2x" alt="Mock-up montrant un ordinateur posé sur une dalle en béton. L'écran est séparé en deux parties égales (splitscreen), à gauche le rendu de l'oiseu animé avec ThreeJS, et à droite le code.">
+        </section>
+
+        <section id="section-5" class="section gridcol">
+            <h2 class="title__cs title--col3">5. Les outils</h2>
+            <p class="p--col3col8">Tout au long de ce projet, j’ai utilisé différents logiciels : <span>Photoshop</span> et <span>Illustrator</span> pour la création d’illustrations 2D, <span>Blender</span> pour les rendus 3D, et enfin <span>Figma</span> pour préparer la mise en page avant le développement.</p>
+             <!-- <img class="img--col6col1" src="assets/images/img_df_cs/boite_outil.webp" srcset="assets/images/img_df_cs/@2x/boite_outil@2x.webp 2x" alt="Rendu 3D d'une boite à outils (j'ai utilisé Blender) remplie des différents logos des logiciels que j'ai utilisé."> -->
+        </section> 
+
+
+        <section id="section-6" class="section gridcol">
+            <h2 class="title__cs title--col3">6. Conclusion</h2>
+            <p class="p--col2col6">SkyGuard est un projet qui mêle réflexion technologique, sensibilité écologique et narration immersive. En imaginant une innovation plausible, j’ai cherché à questionner autant qu’à proposer. Ce travail m’a permis d’explorer des compétences variées — de la modélisation 3D à la conception d’interface — tout en développant une vision critique sur l’impact des technologies futures.</p>
+        </section>
+
+        <section id="section-7" class="section gridcol gridpc">
+            <a class="btn--projet" href="designFiction.html">Explorez le projet</a>
+        </section>
+
+        <section class="section gridcol gridpc">
+            <a class="btn--ret" href="index.html#projects">Retour aux projets</a>
+        </section>
+        
+    </main>
+    <footer id="contact" class="gridfoot gridcol foot_cs">
+        <div class="div--footer">
+        <h4 class="title--h4">Contact&nbsp;me</h4>
+        <p class="p--contact"><a class="mailto" href="mailto:theocolpaert8@gmail.com">theocolpaert8@gmail.com</a></p>
+
+    <div class="socials">
+        <a href="https://www.instagram.com/theo.colpaert/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="img-res" viewBox="0 0 16 16" fill="currentColor"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+
+        <a href="https://www.facebook.com/theo.colpaert" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="img-res" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
+
+        <a href="https://github.com/Foxx05" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="img-res" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
+    </div>
+        </div>
+
+        <p class="p--copy">&#169;Théo Colpaert — 2025</p>
+    </footer>
+</body>
+
+</html>
