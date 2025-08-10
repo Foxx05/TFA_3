@@ -682,7 +682,7 @@ button:hover{
     border-radius: 0;
 }
 
-.btn--projet, .btn--suiv, .btn--ret{
+.btn--projet, .btn--suiv, .btn--ret, .btn--ret__last{
     grid-column: 1/-1;
     text-align: center;
     margin-top: 80px;
@@ -899,6 +899,10 @@ button:hover{
 
     .btn--ret{
         grid-column: 1/4;
+    }
+
+    .btn--ret__last{
+        grid-column: 3/-3;
     }
 
     .gridcol{
