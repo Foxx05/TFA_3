@@ -54,7 +54,9 @@ p{
 a{
     color: #fafafa;
 }
-
+.p--nav{
+    color: #121212;
+}
 .menu{
     position: fixed;
     height: 62px;
@@ -71,14 +73,17 @@ a{
 
 .menu__btn{
     background-color: #fafafa;
-    border: none;
     border-radius: 100%;
-    font-size: clamp(1.5rem, 1.465vw + 1.18rem, 2.938rem);
+    font-size: 53px;
+    height: 53px;
+    width: 53px;
     cursor: pointer;
     color: black;
     position: fixed;
     right: 24px;
-    z-index: 10; 
+    z-index: 10;
+    outline: none;
+    box-shadow: none;
 }
 
 .menu__btn::before{
@@ -730,7 +735,6 @@ button:hover{
 .btn--foot{
     color: #f4b942;
     transition: all 0.3s;
-    cursor: pointer;
     font-weight: 700;
 }
 
