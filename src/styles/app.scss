@@ -682,7 +682,7 @@ button:hover{
     border-radius: 0;
 }
 
-.btn--projet, .btn--suiv, .btn--ret, .btn--ret__last{
+.btn--projet, .btn--suiv, .btn--ret{
     grid-column: 1/-1;
     text-align: center;
     margin-top: 80px;
@@ -901,10 +901,6 @@ button:hover{
         grid-column: 1/4;
     }
 
-    .btn--ret__last{
-        grid-column: 3/-3;
-    }
-
     .gridcol{
         grid-template-columns: repeat(7, 1fr);
         column-gap: 20px;
@@ -921,6 +917,7 @@ button:hover{
         margin-left: 20px;
         margin-right: 20px;
         margin-top: 80px;
+        line-height: 1.5;
     }
 
     .img--center{
