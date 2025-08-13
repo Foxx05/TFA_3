@@ -49,6 +49,7 @@ p{
     line-height: 140%;
     grid-column:1/-1 ;
     background-color: rgba(0, 22, 51, 0.8);
+    font-weight: 200;
 }
 
 a{
@@ -58,17 +59,24 @@ a{
     color: #121212;
 }
 .menu{
-    position: fixed;
-    height: 62px;
-    display: flex;
-    width: 100%;
-    background-color: #fafafa;
-    align-items: center;
-    z-index: 20;
+  position: fixed;
+  top: 0; left: 0; right: 0;          /* fixe la référence */
+  height: 62px;
+  display: flex;
+  width: 100%;
+  background-color: #fafafa;
+  align-items: center;
+  z-index: 20;
+
+  transform: translateY(0);
+  transition: transform .6s ease-in-out, opacity .6s ease-in-out;
+  will-change: transform, opacity;
 }
 
 .menu--hidden{
-    top: -100px;
+  /* retire top:-100px */
+  transform: translateY(-100%);       /* ou calc(-100% - 20px) si tu veux aller un peu plus haut */
+  opacity: 0;
 }
 
 .menu__btn{
