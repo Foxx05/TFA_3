@@ -386,7 +386,12 @@ footer{
     text-decoration: underline;
     cursor: pointer;
 }
-.p--credits:hover{
+
+.p--credits_pc{
+    display: none;
+}
+
+.p--credits:hover, .txt:hover{
     color: #ffab40;
 }
 
@@ -853,16 +858,27 @@ button:hover{
         margin: 0;
         white-space: nowrap;
         margin: 20px;
+        display: flex;
+        flex-direction: row;
     }
 
     .p--credits{
-        grid-column: 6/-1;
-        grid-row: 2/-1;
-        margin: 20px;
-        justify-self: center;
-        position: absolute;
+        display: none;
     }
 
+    .p--credits_pc{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tiret{
+        text-decoration: none;
+        color: #fafafa;
+    }
+    .txt{
+        text-decoration: underline;
+        color: #fafafa;
+    }
     .socials{
         grid-column: 3/-1;
         font-size: 0;
@@ -971,15 +987,7 @@ button:hover{
     .div--footer{
         grid-column: 1/-3;
     }
- 
-    .p--credits{
-        grid-column: 7/-1;
-        margin-top: 20px;
-        margin-right: 20px;
-        text-align: right;
-        margin-left: auto;
-    }
-
+    
     .socials{
         grid-column: 3/-1;
         font-size: 0;
