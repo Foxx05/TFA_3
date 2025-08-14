@@ -85,9 +85,7 @@ a{
     z-index: 50;
     box-shadow: none;
 }
-.menu__btn:hover{
-    color: #fafafa;
-}
+
 .menu__btn::before {
     content: "☰";
     font-size: 25px;
