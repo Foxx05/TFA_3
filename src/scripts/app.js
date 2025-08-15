@@ -296,13 +296,27 @@ const images = document.querySelectorAll('.carousel-img');
 const dots = Array.from(document.querySelectorAll('.dot'));
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const square = document.getElementById('square');
 
-if (images.length && dots.length && prevBtn && nextBtn) {
+if (images.length && dots.length && prevBtn && nextBtn && square) {
   let index = 0;
+
+  // Élément légende (injecté dans le conteneur carré)
+  const captionEl = document.createElement('div');
+  captionEl.className = 'caption';
+  captionEl.setAttribute('role', 'status');
+  captionEl.setAttribute('aria-live', 'polite');
+  square.appendChild(captionEl);
+
+  function updateCaption() {
+    const current = images[index];
+    captionEl.textContent = (current?.dataset.caption || current?.alt || '').trim();
+  }
 
   function updateView() {
     images.forEach((img, i) => img.classList.toggle('active', i === index));
     dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    updateCaption();
   }
 
   prevBtn.addEventListener('click', () => {
@@ -322,7 +336,7 @@ if (images.length && dots.length && prevBtn && nextBtn) {
     });
   });
 
-  updateView();
+  updateView(); // initialise l’affichage + la légende
 }
 if (document.querySelector(".audio-btn")) {
 
