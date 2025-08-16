@@ -254,22 +254,86 @@ if (backToTopButton) {
 }
 
 // === Navigation verticale (scrollspy) ===
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-vertical a");
+(() => {
+  const spyLinks = document.querySelectorAll('.menu__liste a, .nav-vertical a');
+  const spyTargets = [
+    ...document.querySelectorAll('section[id]'),
+    document.getElementById('contact') // footer (si présent)
+  ].filter(Boolean);
 
-if (sections.length > 0 && navLinks.length > 0) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove("active"));
-        document.querySelectorAll(`.nav-vertical a[href="#${entry.target.id}"]`)
-          .forEach(link => link.classList.add("active"));
-      }
+  if (!spyLinks.length || !spyTargets.length) return;
+
+  // Helpers
+  const linksFor = (id) =>
+    document.querySelectorAll(`.menu__liste a[href="#${id}"], .nav-vertical a[href="#${id}"]`);
+
+  const setActive = (id) => {
+    spyLinks.forEach((a) => a.classList.remove('active'));
+    linksFor(id).forEach((a) => a.classList.add('active'));
+  };
+
+  // État visuel immédiat au clic (feedback UX), puis scroll natif
+  spyLinks.forEach((a) => {
+    a.addEventListener('click', () => {
+      const href = a.getAttribute('href') || '';
+      if (href.startsWith('#')) setActive(href.slice(1));
     });
-  }, { threshold: 0.5 });
+  });
 
-  sections.forEach(section => observer.observe(section));
-}
+  // Map des ratios visibles
+  const visibleMap = new Map(spyTargets.map((el) => [el.id, 0]));
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        visibleMap.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+      });
+
+      // Choisir la cible la plus visible
+      let bestId = null;
+      let bestRatio = 0;
+      visibleMap.forEach((ratio, id) => {
+        if (ratio > bestRatio) {
+          bestRatio = ratio;
+          bestId = id;
+        }
+      });
+
+      if (bestId) setActive(bestId);
+    },
+    {
+      // Ajuste la marge haute selon la hauteur de ta nav fixe (~80px)
+      rootMargin: '-80px 0px -20% 0px',
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
+    }
+  );
+
+  spyTargets.forEach((el) => io.observe(el));
+
+  // Sécurité : si on est (quasi) tout en bas -> Contact actif
+  const enforceFooterActiveAtBottom = () => {
+    const doc = document.documentElement;
+    const nearBottom = window.innerHeight + window.scrollY >= doc.scrollHeight - 2;
+    if (nearBottom && document.getElementById('contact')) {
+      setActive('contact');
+    }
+  };
+  window.addEventListener('scroll', enforceFooterActiveAtBottom);
+
+  // État initial : activer le hash si présent, sinon laisser l’observer décider
+  window.addEventListener('load', () => {
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      if (document.getElementById(id)) setActive(id);
+    }
+  });
+
+  // Garder l’état cohérent si le hash change (ex. navigation arrière)
+  window.addEventListener('hashchange', () => {
+    const id = location.hash.slice(1);
+    if (id && document.getElementById(id)) setActive(id);
+  });
+})();
 
 // === Refresh ScrollTrigger à la fin du chargement ===
 window.addEventListener('load', () => {

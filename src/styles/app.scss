@@ -57,7 +57,7 @@ a{
     font-weight: 700;
 }
 
-.menu {
+.menu{
     position: fixed;
     top: 0; left: 0; right: 0;
     height: 62px;
@@ -70,12 +70,12 @@ a{
     will-change: transform, opacity;
 }
 
-.menu--hidden {
+.menu--hidden{
     transform: translateY(-100%);
     opacity: 0;
 }
 
-.menu__btn {
+.menu__btn{
     background: transparent;
     border: none;
     position: fixed;
@@ -86,20 +86,20 @@ a{
     box-shadow: none;
 }
 
-.menu__btn::before {
+.menu__btn::before{
     content: "☰";
     font-size: 25px;
     color: black;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.menu--open .menu__btn::before {
+.menu--open .menu__btn::before{
     content: "✕";
     color: black;
     transform: rotate(90deg);
 }
 
-.menu__liste {
+.menu__liste{
     list-style: none;
     margin: 0;
     padding: 0 24px;
@@ -119,11 +119,17 @@ a{
     will-change: transform;
 }
 
-.menu--open .menu__liste {
+.menu--open .menu__liste{
     transform: translateX(0);
 }
 
-.menu--li {
+.menu__liste a.active,
+.nav-vertical a.active{
+  color: #ffab40;
+  font-weight: 600;
+}
+
+.menu--li{
     color: #fafafa;
     text-decoration: none;
     cursor: pointer;
@@ -132,22 +138,22 @@ a{
     transform: none;
 }
 
-.menu--li a {
+.menu--li a{
     color: #fafafa;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.menu--li a:hover {
+.menu--li a:hover{
     color: #f4b942;
 }
 
-.no-scroll {
+.no-scroll{
     overflow: hidden;
 }
 
-.section {
+.section{
     color: #fafafa;
 }
 
@@ -158,6 +164,10 @@ a{
     font-weight: 700;
     cursor: pointer;
     color: #001633; /* lisible sur #fafafa */
+}
+
+.p--nav:hover{
+    color: #f4b942;
 }
 
 .banniere{
@@ -392,10 +402,6 @@ footer{
     padding: 0;
 }
 
-.section--full{
-    font-size: 0;
-}
-
 .img--header{
     width: 100%;
     margin: 0;
@@ -557,7 +563,7 @@ span{
     background-color: #f4b942;
 }
 
-.carre { position: relative; }
+.carre{ position: relative; }
 
 .carre .caption{
   position: absolute;
@@ -573,8 +579,8 @@ span{
 }
 
 /* Assure que la légende reste au-dessus de l’image active */
-.carre img { z-index: 0; }
-.carre img.active { z-index: 1; }
+.carre img{ z-index: 0; }
+.carre img.active{ z-index: 1; }
 .section--imgplus{
     display: none;
 }
@@ -1293,7 +1299,7 @@ button:hover{
         display: none;
     }
 
-    .audio-btn {
+    .audio-btn{
         display: inline-block; /* ou flex si tu préfères */
         background: none;
         border: none;
