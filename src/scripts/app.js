@@ -1,14 +1,12 @@
 "use strict";
 
-// === Import GSAP ===
+//Import GSAP
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
-// === Définition anticipée du body ===
 const body = document.body;
 
-// === Curseur personnalisé ===
+//Curseur personnalisé - Aide ChatGPT pour gérer les interractions
 if (document.querySelector(".custom-cursor")) {
 const cursor = document.querySelector(".custom-cursor");
 
@@ -39,7 +37,7 @@ document.addEventListener("mouseover", (e) => {
 }
 
 
-// === Fond animé : particules ===
+//Fond animé - Aide ChatGPT 
 const canvas = document.getElementById("particules_bg");
 if (canvas) {
   const ctx = canvas.getContext("2d");
@@ -150,7 +148,7 @@ if (canvas) {
   animate();
 }
 
-// === Animations GSAP ===
+//Animations GSAP
 if (document.querySelector(".title--big")) {
   gsap.from(".title--big", {
     duration: 1,
@@ -170,7 +168,7 @@ if (document.querySelector(".p--center__big")) {
   });
 }
 
-// === Animation lignes page projets ===
+//Animation lignes page projets
 if (document.querySelector(".ligne-haut")) {
   gsap.from(".ligne-haut", {
     scrollTrigger: {
@@ -199,7 +197,7 @@ gsap.from(".ligne-bas", {
 });
 }
 
-// === Scroll Down (scroll vers section suivante) ===
+//Scroll Down
 const scrollDown = document.querySelector('.scroll-down');
 if (scrollDown) {
   window.addEventListener('scroll', () => {
@@ -214,7 +212,7 @@ if (scrollDown) {
   });
 }
 
-// === Menu burger mobile ===
+//Menu burger mobile
 const menuBtn = document.querySelector(".menu__btn");
 const links = document.querySelectorAll(".menu__link");
 const menuElements = document.querySelectorAll(".menu--li");
@@ -231,7 +229,6 @@ if (menuBtn) menuBtn.addEventListener("click", toggleMenu);
 menuElements.forEach(el => el.addEventListener("click", toggleMenu));
 links.forEach(link => link.addEventListener("click", toggleMenu));
 
-// === Hide menu on scroll (sauf pages spécifiques) ===
 const fileName = window.location.pathname.split("/").pop();
 let lastScrollTop = 0;
 
@@ -245,7 +242,7 @@ if (fileName !== "designFiction.html" && fileName !== "pageTemoin.html") {
   });
 }
 
-// === Bouton retour en haut ===
+//Bouton Back To Top
 const backToTopButton = document.querySelector('.backToTop__cs');
 if (backToTopButton) {
   backToTopButton.addEventListener('click', () => {
@@ -253,17 +250,16 @@ if (backToTopButton) {
   });
 }
 
-// === Navigation verticale (scrollspy) ===
+//Etat Actif + nav vertical - Aide ChatGPT pour etats actifs quand 2 sections proches (différentiation difficile)
 (() => {
   const spyLinks = document.querySelectorAll('.menu__liste a, .nav-vertical a');
   const spyTargets = [
     ...document.querySelectorAll('section[id]'),
-    document.getElementById('contact') // footer (si présent)
+    document.getElementById('contact') //footer (si présent)
   ].filter(Boolean);
 
   if (!spyLinks.length || !spyTargets.length) return;
 
-  // Helpers
   const linksFor = (id) =>
     document.querySelectorAll(`.menu__liste a[href="#${id}"], .nav-vertical a[href="#${id}"]`);
 
@@ -272,7 +268,6 @@ if (backToTopButton) {
     linksFor(id).forEach((a) => a.classList.add('active'));
   };
 
-  // État visuel immédiat au clic (feedback UX), puis scroll natif
   spyLinks.forEach((a) => {
     a.addEventListener('click', () => {
       const href = a.getAttribute('href') || '';
@@ -280,7 +275,6 @@ if (backToTopButton) {
     });
   });
 
-  // Map des ratios visibles
   const visibleMap = new Map(spyTargets.map((el) => [el.id, 0]));
 
   const io = new IntersectionObserver(
@@ -289,7 +283,6 @@ if (backToTopButton) {
         visibleMap.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
       });
 
-      // Choisir la cible la plus visible
       let bestId = null;
       let bestRatio = 0;
       visibleMap.forEach((ratio, id) => {
@@ -302,7 +295,6 @@ if (backToTopButton) {
       if (bestId) setActive(bestId);
     },
     {
-      // Ajuste la marge haute selon la hauteur de ta nav fixe (~80px)
       rootMargin: '-80px 0px -20% 0px',
       threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
     }
@@ -310,7 +302,7 @@ if (backToTopButton) {
 
   spyTargets.forEach((el) => io.observe(el));
 
-  // Sécurité : si on est (quasi) tout en bas -> Contact actif
+  //Page Acceuil -> contact détecté en permanence (ChatGPT)
   const enforceFooterActiveAtBottom = () => {
     const doc = document.documentElement;
     const nearBottom = window.innerHeight + window.scrollY >= doc.scrollHeight - 2;
@@ -320,7 +312,6 @@ if (backToTopButton) {
   };
   window.addEventListener('scroll', enforceFooterActiveAtBottom);
 
-  // État initial : activer le hash si présent, sinon laisser l’observer décider
   window.addEventListener('load', () => {
     if (location.hash) {
       const id = location.hash.slice(1);
@@ -328,19 +319,17 @@ if (backToTopButton) {
     }
   });
 
-  // Garder l’état cohérent si le hash change (ex. navigation arrière)
   window.addEventListener('hashchange', () => {
     const id = location.hash.slice(1);
     if (id && document.getElementById(id)) setActive(id);
   });
 })();
 
-// === Refresh ScrollTrigger à la fin du chargement ===
 window.addEventListener('load', () => {
   ScrollTrigger.refresh();
 });
 
-// === Animation de texte sur scroll (.animate) ===
+//Animation de texte sur scroll (.animate)
 gsap.utils.toArray('.animate').forEach(elem => {
   gsap.from(elem, {
     opacity: 0,
@@ -355,7 +344,7 @@ gsap.utils.toArray('.animate').forEach(elem => {
   });
 });
 
-// === Carousel ===
+//Carousel
 const images = document.querySelectorAll('.carousel-img');
 const dots = Array.from(document.querySelectorAll('.dot'));
 const prevBtn = document.getElementById('prev');
@@ -365,7 +354,7 @@ const square = document.getElementById('square');
 if (images.length && dots.length && prevBtn && nextBtn && square) {
   let index = 0;
 
-  // Élément légende (injecté dans le conteneur carré)
+  //Légende - Aide ChatGPT
   const captionEl = document.createElement('div');
   captionEl.className = 'caption';
   captionEl.setAttribute('role', 'status');
@@ -400,8 +389,10 @@ if (images.length && dots.length && prevBtn && nextBtn && square) {
     });
   });
 
-  updateView(); // initialise l’affichage + la légende
+  updateView(); //initialise l’affichage + la légende
 }
+
+//Audio - Aide ChatGPT (gestion play-arrêt en fonction clic + autre audio en cours)
 if (document.querySelector(".audio-btn")) {
 
   let currentAudio = null;
@@ -411,7 +402,7 @@ if (document.querySelector(".audio-btn")) {
     button.addEventListener("click", () => {
       const audioSrc = button.getAttribute("data-audio");
 
-      // Si on reclique sur le bouton en cours : stop
+      //Si on reclique sur le bouton en cours : stop
       if (currentAudio && currentButton === button) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
@@ -421,18 +412,18 @@ if (document.querySelector(".audio-btn")) {
         return;
       }
 
-      // Si un autre son est en cours : stop + retire l’état visuel
+      //Si un autre son est en cours : stop + retire l’état visuel
       if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
         currentButton.classList.remove("is-playing");
       }
 
-      // Nouvelle lecture
+      //Nouvelle lecture
       const audio = new Audio(audioSrc);
       audio.play();
 
-      // Ajouter état visuel
+      //Ajouter état visuel
       button.classList.add("is-playing");
 
       currentAudio = audio;
