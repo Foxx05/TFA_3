@@ -329,7 +329,7 @@ window.addEventListener('load', () => {
   ScrollTrigger.refresh();
 });
 
-//Animation de texte sur scroll (.animate)
+//Animation textes
 gsap.utils.toArray('.animate').forEach(elem => {
   gsap.from(elem, {
     opacity: 0,
@@ -389,7 +389,7 @@ if (images.length && dots.length && prevBtn && nextBtn && square) {
     });
   });
 
-  updateView(); //initialise l’affichage + la légende
+  updateView();
 }
 
 //Audio - Aide ChatGPT (gestion play-arrêt en fonction clic + autre audio en cours)
@@ -402,7 +402,6 @@ if (document.querySelector(".audio-btn")) {
     button.addEventListener("click", () => {
       const audioSrc = button.getAttribute("data-audio");
 
-      //Si on reclique sur le bouton en cours : stop
       if (currentAudio && currentButton === button) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
@@ -412,18 +411,15 @@ if (document.querySelector(".audio-btn")) {
         return;
       }
 
-      //Si un autre son est en cours : stop + retire l’état visuel
       if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
         currentButton.classList.remove("is-playing");
       }
 
-      //Nouvelle lecture
       const audio = new Audio(audioSrc);
       audio.play();
 
-      //Ajouter état visuel
       button.classList.add("is-playing");
 
       currentAudio = audio;
