@@ -21,6 +21,7 @@ document.addEventListener("mouseover", (e) => {
   cursor.classList.toggle("cursor-hover", Boolean(isInteractive || isScrollDown));
 });
 }
+
 if (document.querySelector(".custom-cursor2")) {
 const cursor = document.querySelector(".custom-cursor2");
 
@@ -35,7 +36,6 @@ document.addEventListener("mouseover", (e) => {
   cursor.classList.toggle("cursor-hover", Boolean(isInteractive || isScrollDown));
 });
 }
-
 
 //Fond animé - Aide ChatGPT 
 const canvas = document.getElementById("particules_bg");
