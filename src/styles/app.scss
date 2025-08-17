@@ -76,7 +76,6 @@ a{
 }
 
 .menu__btn{
-    background: transparent;
     border: none;
     position: fixed;
     right: 24px;
@@ -84,6 +83,10 @@ a{
     transform: translateY(-50%);
     z-index: 50;
     box-shadow: none;
+}
+
+.menu__btn:hover{
+    background-color: #fafafa;
 }
 
 .menu__btn::before{
