@@ -354,16 +354,23 @@ const square = document.getElementById('square');
 if (images.length && dots.length && prevBtn && nextBtn && square) {
   let index = 0;
 
-  //Légende - Aide ChatGPT
-  const captionEl = document.createElement('div');
-  captionEl.className = 'caption';
-  captionEl.setAttribute('role', 'status');
-  captionEl.setAttribute('aria-live', 'polite');
-  square.appendChild(captionEl);
+  // Créer une légende uniquement si au moins une image a data-caption
+  const hasCaptions = Array.from(images).some(img => (img.dataset.caption || '').trim().length > 0);
+  let captionEl = null;
+
+  if (hasCaptions) {
+    captionEl = document.createElement('div');
+    captionEl.className = 'caption';
+    captionEl.setAttribute('role', 'status');
+    captionEl.setAttribute('aria-live', 'polite');
+    square.appendChild(captionEl);
+  }
 
   function updateCaption() {
-    const current = images[index];
-    captionEl.textContent = (current?.dataset.caption || current?.alt || '').trim();
+    if (!captionEl) return; // pas de légende => rien à faire
+    const text = images[index]?.dataset.caption?.trim() || '';
+    captionEl.textContent = text;
+    captionEl.hidden = !text; // au cas où
   }
 
   function updateView() {
