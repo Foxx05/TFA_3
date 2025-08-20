@@ -444,6 +444,14 @@ span{
 
 .img--falcon, .img--falcon__cs, .img--capt{
     filter: drop-shadow(0 0 2px #fafafa);
+    display: inline-block;
+      animation: falcon-fly 3s ease-in-out infinite;
+}
+
+@keyframes falcon-fly{
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+    100% { transform: translateY(0); }
 }
    
 .p--col2col6__tfa, .p--col4col8__tfa, .p--col1col5__tfa, .p--col1col5__capt, .p--col3col6__tfa{
@@ -693,6 +701,13 @@ button:hover{
     width: 50%;
     grid-column: 1/-1;
     justify-self: center;
+    animation: analyse-move 3s ease-in-out infinite;
+}
+
+@keyframes analyse-move{
+    0%  { transform: translateX(0); }
+    50% { transform: translateX(-16px); }
+    100%{ transform: translateX(0); }
 }
 
 .p--commun1{
@@ -1088,14 +1103,6 @@ button:hover{
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // TFA
     .img--falcon__cs{
         filter: drop-shadow(0 0 5px #fafafa);
-        display: inline-block;
-        animation: falcon-fly 3s ease-in-out infinite;
-    }
-
-    @keyframes falcon-fly{
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-16px); }
-        100% { transform: translateY(0); }
     }
 
     .img--capt, .detail_cam{
@@ -1541,13 +1548,6 @@ button:hover{
 
     .img--analyse{
         display: inline-block;
-        animation: analyse-move 3s ease-in-out infinite;
-    }
-
-    @keyframes analyse-move{
-        0%  { transform: translateX(0); }
-        50% { transform: translateX(-16px); }
-        100%{ transform: translateX(0); }
     }
 
     .p--chiffre__prux{
