@@ -732,7 +732,12 @@ button:hover{
 
 .btn--projet{
     background-color: #f4b942;
-    color: white;
+    color: #2b3553;
+    display: flex;
+    flex-direction: inline;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .btn--ret, .btn--suiv {
