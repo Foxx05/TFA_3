@@ -747,6 +747,20 @@ button:hover{
     gap: 8px;
 }
 
+#see{
+    margin-top: 64px;
+    margin-bottom: 0px;
+}
+
+#back{
+    margin-top : 64px;
+    margin-bottom : 18px;
+}
+
+#next{
+    margin-bottom: 64px;
+}
+
 .btn--projet:hover, .btn--suiv:hover, .btn--ret:hover{
     color: #fafafa;
     background-color: #2b3553;
@@ -962,7 +976,11 @@ button:hover{
     .btn--ret{
         grid-column: 1/4;
     }
-
+    #see, #back, #next{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
     .gridcol{
         grid-template-columns: repeat(7, 1fr);
         column-gap: 20px;
