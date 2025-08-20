@@ -745,11 +745,13 @@ button:hover{
     transition: all .3s;
     margin-bottom: 20px;
 }
-.btn--suiv svg, .btn--ret svg {
+
+.btn--suiv svg, .btn--ret svg{
 	width:24px;
 	height:24px;
 	flex-shrink:0;
 }
+
 .btn--projet{
     background-color: #f4b942;
     color: #2b3553;
