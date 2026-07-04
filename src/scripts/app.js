@@ -197,6 +197,20 @@ gsap.from(".ligne-bas", {
 });
 }
 
+if (document.querySelector(".ligne-bas2")) {
+gsap.from(".ligne-bas2", {
+  scrollTrigger: {
+    trigger: ".ligne-bas2",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  duration: 1,
+  xPercent: 100,
+  opacity: 0,
+  ease: "power3.out",
+});
+}
+
 //Scroll Down
 const scrollDown = document.querySelector('.scroll-down');
 if (scrollDown) {
